@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /sds/
 
 Sitemap: https://20020831.xyz/sitemap.xml
