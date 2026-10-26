@@ -4,6 +4,9 @@
 # 重构期间的样版与临时脚本，不发布
 redesign/
 
+# 设计评审产物（截图 + 说明），不发布
+review/
+
 # 系统垃圾
 .DS_Store
 Thumbs.db
