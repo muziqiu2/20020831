@@ -7,8 +7,8 @@
 <meta name="description" content="阿木（AMU），全栈开发者，在山东威海。做公益图床、随机图 API，还有一个异地同步看电影的播放器。">
 <link rel="canonical" href="https://20020831.xyz/">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF9F7">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#12120F">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3F3F1">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0C0C0B">
 <meta name="author" content="阿木 AMU">
 <meta name="format-detection" content="telephone=no,email=no,address=no">
 
@@ -18,6 +18,7 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 
 <meta property="og:type" content="website">
@@ -39,184 +40,142 @@
 <meta name="twitter:image:alt" content="阿木 AMU，全栈开发者">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","@id":"https://20020831.xyz/#person","name":"阿木","alternateName":"AMU","url":"https://20020831.xyz/","image":"https://20020831.xyz/assets/og.png","jobTitle":"全栈开发者","email":"jyyg@vip.qq.com","alumniOf":{"@type":"CollegeOrUniversity","name":"华北电力大学"},"homeLocation":{"@type":"Place","name":"山东威海"},"sameAs":["https://github.com/muziqiu2","https://blog.20020831.xyz/"],"knowsAbout":["PHP","JavaScript","SQL","Nginx","Cloudflare"]}
+{"@context":"https://schema.org","@type":"Person","@id":"https://20020831.xyz/#person","name":"阿木","alternateName":"AMU","url":"https://20020831.xyz/","image":"https://20020831.xyz/assets/og.png","jobTitle":"全栈开发者","email":"jyyg@vip.qq.com","homeLocation":{"@type":"Place","name":"山东威海"},"sameAs":["https://github.com/muziqiu2","https://blog.20020831.xyz/"],"knowsAbout":["PHP","JavaScript","SQL","Nginx","Cloudflare"]}
 </script>
 </head>
 <body>
 
 <a class="skip" href="#main">跳到主要内容</a>
-<div class="progress" data-progress aria-hidden="true"></div>
+<div class="bar" aria-hidden="true"></div>
+<div class="rail" aria-hidden="true"><span class="fill"></span><span class="flow"></span><span class="head"></span></div>
 
-<header class="nav">
-  <div class="wrap nav-in">
-    <a class="brand" href="/">amu<span class="host">@20020831</span><em>:~$</em></a>
-    <nav aria-label="主导航">
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="/">amu</a>
+    <p class="top-meta">全栈开发者 / 山东威海</p>
+    <nav class="nav" aria-label="主导航">
       <a href="#work">作品</a>
-      <a href="https://blog.20020831.xyz/" target="_blank" rel="noopener">博客 <span aria-hidden="true">↗</span></a>
       <a href="#about">关于</a>
-      <a href="https://github.com/muziqiu2" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
-      <button class="theme-btn" type="button" data-theme-toggle aria-label="深色模式" aria-pressed="false" title="切换到深色模式">
-        <span class="sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg></span>
-        <span class="moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 13.2A8.6 8.6 0 1 1 10.8 3.5a6.8 6.8 0 0 0 9.7 9.7z"/></svg></span>
+      <a class="hide-s" href="https://blog.20020831.xyz/" target="_blank" rel="noopener">博客</a>
+      <a class="hide-s" href="https://github.com/muziqiu2" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme" type="button" data-theme-toggle aria-pressed="false" aria-label="深色模式">
+        <span class="sun" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2.6v2.1M12 19.3v2.1M2.6 12h2.1M19.3 12h2.1M5.4 5.4l1.5 1.5M17.1 17.1l1.5 1.5M18.6 5.4l-1.5 1.5M6.9 17.1l-1.5 1.5"/></svg></span>
+        <span class="moon" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M20.4 13.3A8.5 8.5 0 1 1 10.7 3.6a6.7 6.7 0 0 0 9.7 9.7z"/></svg></span>
       </button>
     </nav>
   </div>
 </header>
 
-<main class="wrap" id="main" tabindex="-1">
+<main id="main" tabindex="-1">
 
   <section class="hero">
-    <div>
-      <p class="eyebrow">全栈开发者 · 山东威海</p>
-      <h1>做了几个小工具，<br>都还在跑。</h1>
-      <p class="lede">在华北电力大学读书。写了个公益图床、一个随机图 API，还有个给异地恋同步看电影的播放器。都是自己用得上才写的。</p>
+   <div class="wrap">
+    <div class="hero-meta">
+      <span class="status"><i aria-hidden="true"></i>运行中</span>
+      <span class="coord">37.51&deg;N 122.12&deg;E</span>
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="mega" data-count="4000000" data-suffix="+">4,000,000+</span>
+      <span class="mega-cap">年均服务人次</span>
+    </h1>
+
+    <div class="rule" aria-hidden="true"><span class="live"></span><span class="cap"></span></div>
+
+    <div class="readings">
+      <div><b>6 个</b><span>产品在跑</span></div>
+      <div><b>28 TB</b><span>年均分发流量</span></div>
+      <div><b>4 年</b><span>一直没停</span></div>
+    </div>
+
+    <div class="hero-foot">
+      <p class="lede"><strong>阿木</strong>，全栈开发者。做了个公益图床、一个随机图 API，还有个给异地恋同步看电影的播放器。都是自己用得上才写的。</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#work">看作品 <span aria-hidden="true">→</span></a>
-        <a class="btn" href="mailto:jyyg@vip.qq.com">发邮件</a>
-        <span class="status"><span class="pulse" aria-hidden="true"></span>不忙，能接活</span>
+        <a class="btn" href="#work">看作品 <svg class="arw" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><path d="M1 9L9 1M9 1H2.9M9 1v6.1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+        <a class="btn ghost" href="mailto:jyyg@vip.qq.com">发邮件</a>
       </div>
     </div>
-    <pre class="term"><span class="cmd"><em>$</em> whoami
-amu · full-stack</span><span class="cmd cmd-2"><em>$</em> ls ./stack
-php  javascript  sql
-nginx  sqlite  cloudflare</span><span class="cmd"><em>$</em> cat status.txt
-open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
+   </div>
   </section>
 
-  <div class="metrics">
-    <div><b>6 个</b><span>在跑的产品</span></div>
-    <div><b>3,700 万</b><span>月请求量</span></div>
-    <div><b>7 TB</b><span>月流量</span></div>
-    <div><b>4 年</b><span>持续维护</span></div>
-  </div>
-
   <section class="sec" id="work">
-    <div class="sec-head" data-reveal>
-      <h2><span class="num">01</span>作品</h2>
-      <a class="more" href="https://github.com/muziqiu2" target="_blank" rel="noopener">其他项目在 GitHub <span aria-hidden="true">↗</span></a>
+   <div class="wrap">
+    <div class="sec-head">
+      <h2>作品</h2>
+      <a class="more" href="https://github.com/muziqiu2" target="_blank" rel="noopener">GitHub 上还有 <svg class="arw" viewBox="0 0 10 10" width="10" height="10" aria-hidden="true"><path d="M1 9L9 1M9 1H2.9M9 1v6.1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
     </div>
-    <div class="cards">
 
-      <article class="card" data-card data-reveal>
-        <div class="card-in">
-          <div class="face front" data-face="front">
-            <div class="card-top">
-              <span class="dot" aria-hidden="true"></span>
-              <h3>魔法师图床</h3>
-            </div>
-            <p class="desc">公益图床，兰空那套搭的，图走全球 CDN。写东西的时候复制个外链就能用。</p>
-            <div class="tags"><span>兰空图床</span><span>CDN</span></div>
-          </div>
-          <div class="face back" id="back-1" data-face="back">
-            <p class="bk-title">魔法师图床</p>
-            <dl class="spec">
-              <div><dt>技术</dt><dd>兰空图床 · 全球 CDN</dd></div>
-              <div><dt>费用</dt><dd>永久免费</dd></div>
-              <div><dt>状态</dt><dd>在线 4 年</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="card-foot">
-          <a class="card-link" href="https://tc.mofashi.ltd/" target="_blank" rel="noopener">打开 tc.mofashi.ltd <span class="ico" aria-hidden="true">↗</span></a>
-          <button class="flip-btn" type="button" data-flip aria-expanded="false" aria-controls="back-1">
-            <span class="txt">详情</span><span class="ico" aria-hidden="true">↻</span>
-          </button>
-        </div>
-      </article>
-
-      <article class="card" data-card data-reveal>
-        <div class="card-in">
-          <div class="face front" data-face="front">
-            <div class="card-top">
-              <span class="dot" aria-hidden="true"></span>
-              <h3>魔法师随机图片 API</h3>
-            </div>
-            <p class="desc">PHP + SQLite 的随机图 API，手机和电脑给的图不一样。要跳转就 302，要数据就直接给 JSON。后台有统计，升级回滚走 GitHub Releases。</p>
-            <div class="tags"><span>PHP</span><span>SQLite</span><span>MIT</span></div>
-          </div>
-          <div class="face back" id="back-2" data-face="back">
-            <p class="bk-title">魔法师随机图片 API</p>
-            <dl class="spec">
-              <div><dt>版本</dt><dd>v3.2.3.5</dd></div>
-              <div><dt>技术</dt><dd>PHP · SQLite · APCu</dd></div>
-              <div><dt>许可</dt><dd>MIT</dd></div>
-              <div><dt>源码</dt><dd><a href="https://github.com/muziqiu2/img-api" target="_blank" rel="noopener">muziqiu2/img-api</a></dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="card-foot">
-          <a class="card-link" href="https://sjtp.api.mofashi.ltd/" target="_blank" rel="noopener">打开 sjtp.api.mofashi.ltd <span class="ico" aria-hidden="true">↗</span></a>
-          <button class="flip-btn" type="button" data-flip aria-expanded="false" aria-controls="back-2">
-            <span class="txt">详情</span><span class="ico" aria-hidden="true">↻</span>
-          </button>
-        </div>
-      </article>
-
-      <article class="card" data-card data-reveal>
-        <div class="card-in">
-          <div class="face front" data-face="front">
-            <div class="card-top">
-              <span class="dot" aria-hidden="true"></span>
-              <h3>自由播放器</h3>
-            </div>
-            <p class="desc">给异地恋用的。扔个视频链接进去就能开房间，两个人一起暂停、一起快进。MP4 和 m3u8 都行，没有广告。</p>
-            <div class="tags"><span>VideoTogether</span><span>m3u8</span></div>
-          </div>
-          <div class="face back" id="back-3" data-face="back">
-            <p class="bk-title">自由播放器</p>
-            <dl class="spec">
-              <div><dt>技术</dt><dd>VideoTogether</dd></div>
-              <div><dt>格式</dt><dd>MP4 · m3u8</dd></div>
-              <div><dt>广告</dt><dd>无</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="card-foot">
-          <a class="card-link" href="https://zybfq.mofashi.ltd/" target="_blank" rel="noopener">打开 zybfq.mofashi.ltd <span class="ico" aria-hidden="true">↗</span></a>
-          <button class="flip-btn" type="button" data-flip aria-expanded="false" aria-controls="back-3">
-            <span class="txt">详情</span><span class="ico" aria-hidden="true">↻</span>
-          </button>
-        </div>
-      </article>
-
-    </div>
+    <ol class="index">
+      <li>
+        <a href="https://tc.mofashi.ltd/" target="_blank" rel="noopener">
+          <span class="r-name">魔法师图床</span>
+          <span class="r-desc">公益图床，在兰空图床基础上二开的，图走全球 CDN。写东西的时候复制个外链就能用。</span>
+          <span class="r-host">tc.mofashi.ltd</span>
+          <span class="r-go" aria-hidden="true"><svg viewBox="0 0 10 10" width="12" height="12"><path d="M1 9L9 1M9 1H2.9M9 1v6.1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://sjtp.api.mofashi.ltd/" target="_blank" rel="noopener">
+          <span class="r-name">魔法师随机图片 API</span>
+          <span class="r-desc">PHP + SQLite 的随机图 API，手机和电脑给的图不一样。要跳转就 302，要数据就直接给 JSON。后台有统计，升级回滚走 GitHub Releases。</span>
+          <span class="r-host">sjtp.api.mofashi.ltd</span>
+          <span class="r-go" aria-hidden="true"><svg viewBox="0 0 10 10" width="12" height="12"><path d="M1 9L9 1M9 1H2.9M9 1v6.1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://zybfq.mofashi.ltd/" target="_blank" rel="noopener">
+          <span class="r-name">自由播放器</span>
+          <span class="r-desc">给异地恋用的。扔个视频链接进去就能开房间，两个人一起暂停、一起快进。MP4 和 m3u8 都行，没有广告。</span>
+          <span class="r-host">zybfq.mofashi.ltd</span>
+          <span class="r-go" aria-hidden="true"><svg viewBox="0 0 10 10" width="12" height="12"><path d="M1 9L9 1M9 1H2.9M9 1v6.1" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></span>
+        </a>
+      </li>
+    </ol>
+   </div>
   </section>
 
   <section class="sec" id="about">
-    <div class="sec-head" data-reveal>
-      <h2><span class="num">02</span>关于</h2>
+   <div class="wrap">
+    <div class="sec-head">
+      <h2>关于</h2>
       <a class="more" href="mailto:jyyg@vip.qq.com">jyyg@vip.qq.com</a>
     </div>
-    <div class="about-grid">
-      <div data-reveal>
-        <p class="lede">数据库、后端、前端、部署，都自己来。不太追新东西，能跑的东西就不动它。</p>
-        <p class="now"><span class="pulse" aria-hidden="true"></span><span>最近在拆 <a href="https://github.com/muziqiu2/img-api" target="_blank" rel="noopener">随机图 API</a>：之前一个文件塞了配置、认证、出图、统计，改一处要翻半天；现在拆开了，后台也跟着重写。</span></p>
+
+    <div class="about">
+      <div>
+        <p>数据库、后端、前端、部署，都自己来。不太追新东西，能跑的东西就不动它。</p>
+        <p class="now"><span class="dot" aria-hidden="true"></span><span>最近在拆 <a class="inline" href="https://github.com/muziqiu2/img-api" target="_blank" rel="noopener">随机图 API</a>：之前一个文件塞了配置、认证、出图、统计，改一处要翻半天；现在拆开了，后台也跟着重写。</span></p>
         <div class="about-cta">
-          <a class="btn btn-primary" href="mailto:jyyg@vip.qq.com">发邮件</a>
-          <button class="btn copy-btn" type="button" data-copy="jyyg@vip.qq.com">
-            <span class="txt">复制邮箱</span>
-          </button>
+          <a class="btn" href="mailto:jyyg@vip.qq.com">发邮件</a>
+          <button class="btn ghost copy-btn" type="button" data-copy="jyyg@vip.qq.com"><span class="txt">复制邮箱</span></button>
         </div>
         <p class="copy-hint" role="status" aria-live="polite"></p>
       </div>
-      <dl class="stack" data-reveal>
-        <div><dt>语言</dt><dd>PHP · JavaScript · SQL</dd></div>
-        <div><dt>前端</dt><dd>Bootstrap 5 · jQuery · Chart.js</dd></div>
-        <div><dt>存储</dt><dd>SQLite · APCu 缓存</dd></div>
-        <div><dt>部署</dt><dd>Nginx · Cloudflare</dd></div>
+
+      <dl class="spec">
+        <div><dt>语言</dt><dd>PHP / JavaScript / SQL</dd></div>
+        <div><dt>前端</dt><dd>Bootstrap 5 / jQuery / Chart.js</dd></div>
+        <div><dt>存储</dt><dd>SQLite / APCu 缓存</dd></div>
+        <div><dt>部署</dt><dd>Nginx / Cloudflare</dd></div>
       </dl>
     </div>
+   </div>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap foot-in">
-    <p>© 2026 阿木 · 20020831.xyz</p>
-    <div class="foot-links">
-      <a href="https://github.com/muziqiu2" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:jyyg@vip.qq.com">Email</a>
-      <a href="https://blog.20020831.xyz/" target="_blank" rel="noopener">Blog</a>
+  <div class="wrap">
+    <p class="foot-mark" aria-hidden="true">20020831.xyz</p>
+    <div class="foot-row">
+      <div class="foot-links">
+        <a href="https://github.com/muziqiu2" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:jyyg@vip.qq.com">Email</a>
+        <a href="https://blog.20020831.xyz/" target="_blank" rel="noopener">博客</a>
+      </div>
+      <p class="foot-legal">&copy; 2026 阿木 / 20020831.xyz</p>
+    </div>
+    <div class="foot-legal foot-beian">
       <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">鲁ICP备2022005744号-3</a>
       <a href="https://beian.mps.gov.cn/#/query/webSearch?code=37152102000142" target="_blank" rel="nofollow noopener">鲁公网安备37152102000142号</a>
     </div>
@@ -225,17 +184,17 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
 
 <script>
 /* ============================================================
-   全站交互。原则：
-   1. 不引入依赖，全部渐进增强 —— 没 JS 时内容照样完整可读；
-   2. 所有动效都尊重 prefers-reduced-motion；
-   3. 每个控件都有可读的名字和正确的 ARIA 状态。
+   运行中 / Uptime
+   1. 无 JS 时内容完整可读，数字直接显示终值
+   2. 所有动效尊重 prefers-reduced-motion
+   3. 滚动只写一个 CSS 变量，不做布局读写
    ============================================================ */
 (function () {
   var html = document.documentElement;
   html.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---------- 1. 主题切换（记住选择，默认跟随系统）---------- */
+  /* ---------- 主题 ---------- */
   var KEY = 'amu-theme';
   var toggle = document.querySelector('[data-theme-toggle]');
 
@@ -247,9 +206,8 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
   function paintBtn() {
     if (!toggle) return;
     var isDark = resolved() === 'dark';
-    toggle.setAttribute('aria-label', '深色模式');
     toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-    toggle.setAttribute('title', isDark ? '切换到浅色模式' : '切换到深色模式');
+    toggle.setAttribute('aria-label', isDark ? '浅色模式' : '深色模式');
   }
   try {
     var saved = localStorage.getItem(KEY);
@@ -265,17 +223,13 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
       paintBtn();
     });
   }
-  /* 用户没手动选过时，系统主题变了要跟着变 */
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
     if (!html.getAttribute('data-theme')) paintBtn();
   });
 
-  /* ---------- 2. 阅读进度 + 3. 导航高亮 ----------
-     不依赖 rAF：滚动事件本身已按帧合并；偏移只在 resize / load 时量一次，
-     scroll 里只做算术和 class 切换，不会触发强制重排。 */
-  var bar = document.querySelector('[data-progress]');
-  var links = [].slice.call(document.querySelectorAll('.nav nav a[href^="#"]'));
-  var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  /* ---------- 轨道进度 + 导航高亮 ---------- */
+  var navLinks = [].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+  var targets = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
   var marks = [];
   var scrollMax = 0;
 
@@ -287,29 +241,55 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
   }
   function paint() {
     var y = window.scrollY;
-    if (bar) bar.style.setProperty('--p', (scrollMax > 0 ? Math.min(1, Math.max(0, y / scrollMax)) : 0).toFixed(4));
+    html.style.setProperty('--p', (scrollMax > 0 ? Math.min(1, Math.max(0, y / scrollMax)) : 0).toFixed(4));
 
     var line = y + window.innerHeight * 0.35;
     var current = -1;
     for (var i = 0; i < marks.length; i++) if (marks[i] <= line) current = i;
-    links.forEach(function (a, i) {
-      var on = i === current;
-      if (on) a.setAttribute('aria-current', 'true');
+    navLinks.forEach(function (a, i) {
+      if (i === current) a.setAttribute('aria-current', 'true');
       else a.removeAttribute('aria-current');
-      a.classList.toggle('is-active', on);
     });
   }
-
   window.addEventListener('scroll', paint, { passive: true });
   window.addEventListener('resize', function () { measure(); paint(); });
   window.addEventListener('load', measure);
   measure();
   paint();
-  setTimeout(measure, 600);   /* 字体和布局稳定之后再量一次 */
+  setTimeout(measure, 600);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 
-  /* ---------- 4. 滚动入场（只播一次，进来就停）---------- */
-  var items = [].slice.call(document.querySelectorAll('[data-reveal]'));
+  /* ---------- 通电：进门时水平轨道从左推到底 ---------- */
+  setTimeout(function () { html.classList.add('is-live'); }, 90);
+
+  /* ---------- 数字滚动：一次，滚完就停 ---------- */
+  var el = document.querySelector('[data-count]');
+  if (el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var fmt = function (n) { return n.toLocaleString('en-US') + suffix; };
+    if (!isFinite(target)) target = 0;
+    if (reduce.matches) {
+      el.textContent = fmt(target);
+    } else {
+      var dur = 1500;
+      var start = null;
+      var step = function (t) {
+        if (start === null) start = t;
+        var k = Math.min(1, (t - start) / dur);
+        var e = 1 - Math.pow(1 - k, 3);
+        el.textContent = fmt(Math.round(target * e));
+        if (k < 1) requestAnimationFrame(step);
+        else el.textContent = fmt(target);
+      };
+      setTimeout(function () { requestAnimationFrame(step); }, 260);
+      /* 兜底：标签页切走 / rAF 被节流时，别让数字卡在中间值 */
+      setTimeout(function () { el.textContent = fmt(target); }, dur + 700);
+    }
+  }
+
+  /* ---------- 作品行揭示 ---------- */
+  var rows = [].slice.call(document.querySelectorAll('.index a'));
   if ('IntersectionObserver' in window && !reduce.matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -317,24 +297,19 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
         en.target.classList.add('is-in');
         io.unobserve(en.target);
       });
-    }, { rootMargin: '0px', threshold: 0.01 });
-    items.forEach(function (el) {
-      /* 已经在视口里的直接显示：不要"加载完再淡入"，也不要让探进首屏的那一条是空白 */
-      if (el.getBoundingClientRect().top < window.innerHeight) {
-        el.classList.add('is-in', 'no-anim');
-      } else {
-        io.observe(el);
-      }
+    }, { threshold: 0.01 });
+    rows.forEach(function (r) {
+      if (r.getBoundingClientRect().top < window.innerHeight) r.classList.add('is-in');
+      else io.observe(r);
     });
   } else {
-    items.forEach(function (el) { el.classList.add('is-in', 'no-anim'); });
+    rows.forEach(function (r) { r.classList.add('is-in'); });
   }
-  /* 保险：万一 observer 没触发，2.5s 后全部放出来，绝不把内容锁死 */
   setTimeout(function () {
-    items.forEach(function (el) { el.classList.add('is-in'); });
+    rows.forEach(function (r) { r.classList.add('is-in'); });
   }, 2500);
 
-  /* ---------- 5. 复制邮箱 ---------- */
+  /* ---------- 复制邮箱 ---------- */
   var copyBtn = document.querySelector('[data-copy]');
   var hint = document.querySelector('.copy-hint');
   var hintTimer;
@@ -376,46 +351,7 @@ open to freelance<span class="caret" aria-hidden="true"></span></span></pre>
       }
     });
   }
-
-  /* ---------- 6. 翻面（hover 预览 + 点按锁定）---------- */
-  [].slice.call(document.querySelectorAll('[data-card]')).forEach(function (card) {
-    var btn = card.querySelector('[data-flip]');
-    var txt = btn.querySelector('.txt');
-    var front = card.querySelector('[data-face="front"]');
-    var back = card.querySelector('[data-face="back"]');
-    var backLinks = [].slice.call(back.querySelectorAll('a'));
-
-    back.setAttribute('aria-hidden', 'true');
-    backLinks.forEach(function (a) { a.setAttribute('tabindex', '-1'); });
-
-    function setState(flipped) {
-      card.dataset.flipped = flipped ? 'true' : 'false';
-      btn.setAttribute('aria-expanded', flipped ? 'true' : 'false');
-      txt.textContent = flipped ? '返回' : '详情';
-      if (flipped) {
-        back.removeAttribute('aria-hidden');
-        backLinks.forEach(function (a) { a.removeAttribute('tabindex'); });
-        front.setAttribute('aria-hidden', 'true');
-      } else {
-        back.setAttribute('aria-hidden', 'true');
-        backLinks.forEach(function (a) { a.setAttribute('tabindex', '-1'); });
-        front.removeAttribute('aria-hidden');
-      }
-    }
-
-    btn.addEventListener('click', function () {
-      card.dataset.user = 'true';   /* 用过按钮之后，这一卡不再响应 hover */
-      setState(card.dataset.flipped !== 'true');
-    });
-
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && card.dataset.flipped === 'true') setState(false);
-    });
-
-    setState(false);
-  });
 })();
 </script>
 </body>
 </html>
-

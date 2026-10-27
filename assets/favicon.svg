@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="阿木 AMU">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="阿木 AMU">
 <title>阿木 AMU</title>
-<rect width="32" height="32" rx="7" fill="#B45309"/>
-<path d="M9.6 9.4 L16.6 16 L9.6 22.6" fill="none" stroke="#FFFFFF" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M18.4 22.6 H23.6" fill="none" stroke="#FFFFFF" stroke-width="3.1" stroke-linecap="round"/>
+<rect width="16" height="16" fill="#0F0F0E"/>
+<!-- 轨道：未通电的部分 -->
+<rect x="7" y="2" width="2" height="12" fill="#8C8C84"/>
+<!-- 读头：当前位置 -->
+<rect x="5" y="5" width="6" height="6" fill="#FFB000"/>
 </svg>

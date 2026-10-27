@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>没有这个页面 · 阿木 AMU</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light dark">
+<script>(function(){try{var t=localStorage.getItem('amu-theme');if(t==='dark'||t==='light'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{
+  font-family:'Archivo';
+  src:url('/assets/fonts/archivo-latin.woff2') format('woff2');
+  font-weight:400 800;font-stretch:62% 125%;font-style:normal;font-display:swap;
+}
+:root{
+  color-scheme:light;
+  --ground:#F3F3F1;--ink:#0F0F0E;--muted:#61615B;--line:#D6D6D0;--accent:#A35A00;
+  --f:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0C0C0B;--ink:#EDEDE9;--muted:#8A8A82;--line:#262623;--accent:#FFB000;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0C0C0B;--ink:#EDEDE9;--muted:#8A8A82;--line:#262623;--accent:#FFB000;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  min-height:100vh;background:var(--ground);color:var(--ink);
+  font-family:var(--f);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  display:flex;flex-direction:column;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:var(--ground)}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 26px}
+@media (min-width:1080px){ .wrap{padding-left:96px;padding-right:40px} }
+
+.top{position:sticky;top:0;background:var(--ground);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;min-height:62px}
+.mark{font-size:1.0625rem;font-weight:700;font-stretch:112%;letter-spacing:-.025em}
+.top-note{margin-left:26px;font-size:.75rem;color:var(--muted)}
+
+main{flex:1;display:flex;align-items:center;padding:56px 0}
+
+.code{
+  font-size:clamp(5rem,1rem + 20vw,15rem);font-weight:800;font-stretch:122%;
+  line-height:.8;letter-spacing:-.06em;margin-left:-.06em;
+  font-variant-numeric:tabular-nums;
+}
+/* 断掉的轨道：灰线只到这里就没了 */
+.rail{position:relative;height:1px;background:var(--line);
+  margin-top:clamp(28px,4vw,40px);width:52%;max-width:520px}
+.rail i{position:absolute;left:0;top:0;height:1px;width:38%;background:var(--accent)}
+.rail b{position:absolute;left:38%;top:-4px;width:9px;height:9px;background:var(--accent)}
+.msg{margin-top:clamp(26px,3.6vw,40px);max-width:34ch;color:var(--muted)}
+.msg strong{color:var(--ink);font-weight:500}
+
+.back{display:inline-flex;align-items:center;gap:10px;margin-top:clamp(26px,3.4vw,38px);
+  font-size:.9375rem;font-weight:500;padding:0 20px;min-height:46px;
+  background:var(--ink);color:var(--ground);
+  transition:background .22s ease,color .22s ease,transform .22s var(--ease)}
+.back:hover{background:var(--accent);color:var(--ground);transform:translateX(2px)}
+.back svg{transition:transform .28s var(--ease)}
+.back:hover svg{transform:translate(-3px,0)}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px}
+footer p{font-size:.6875rem;color:var(--muted)}
+
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){ .back{transition:none} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark" href="/">amu</a>
+    <span class="top-note">全栈开发者 / 山东威海</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="code" aria-hidden="true">404</p>
+    <div class="rail" aria-hidden="true"><i></i><b></b></div>
+    <h1 class="msg"><strong>这条轨道到这里就断了。</strong>你要找的页面不在这台机器上。</h1>
+    <a class="back" href="/">
+      <svg viewBox="0 0 10 10" width="11" height="11" aria-hidden="true"><path d="M9 1L1 9M1 9H7.1M1 9V2.9" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+      回到首页
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 阿木 / 20020831.xyz</p>
+  </div>
+</footer>
+
+</body>
+</html>
