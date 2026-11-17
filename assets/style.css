@@ -32,7 +32,7 @@
   --t-body:clamp(1rem,0.96rem + 0.2vw,1.0625rem);
   --t-s:0.875rem;
   --t-xs:0.75rem;
-  --t-2xs:0.6875rem;
+  --t-2xs:0.75rem;
 
   --ease:cubic-bezier(.22,1,.36,1);
   --p:0;
@@ -311,14 +311,17 @@ footer{margin-top:clamp(52px,7vw,96px);border-top:1px solid var(--line);
 .foot-row{display:flex;justify-content:space-between;align-items:baseline;
   gap:16px 32px;flex-wrap:wrap;margin-top:clamp(34px,4.4vw,52px)}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap;font-size:var(--t-s)}
-.foot-links a{color:var(--muted);transition:color .18s}
+.foot-links a{color:var(--muted);transition:color .18s;
+  display:inline-flex;align-items:center;min-height:32px}
 .foot-links a:hover{color:var(--ink)}
 .foot-legal{font-size:var(--t-2xs);color:var(--muted);letter-spacing:.01em}
-.foot-legal a{border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+.foot-legal a{border-bottom:1px solid transparent;transition:border-color .2s,color .2s;
+  display:inline-flex;align-items:center;min-height:32px}
 .foot-legal a:hover{color:var(--ink);border-color:var(--line-strong)}
 .foot-beian{margin-top:10px;display:flex;gap:18px;flex-wrap:wrap}
 
 /* ---------- 焦点 ---------- */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 /* 作品行被填满时，外圈琥珀框会消失，改成内嵌反色框 */
 .index a:focus-visible{outline:2px solid var(--accent-on);outline-offset:-6px}
@@ -350,6 +353,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   .r-host{align-self:start;margin-top:6px}
   .spec{grid-template-columns:1fr;gap:18px}
   .foot-links{gap:16px}
+}
+
+/* P0：桌面首屏前移，让第一张作品落进折线（不改巨型数字字号） */
+@media (min-width:901px){
+  .hero{padding:52px 0 40px}
+  .hero-h1{margin-top:32px}
+  .mega-cap{margin-top:20px}
+  .rule{margin-top:30px}
+  .readings{margin-top:26px}
+  .hero-foot{margin-top:32px}
+  .sec{padding-top:64px}
 }
 
 @media (prefers-reduced-motion:reduce){

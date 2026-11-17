@@ -76,14 +76,15 @@
     </div>
 
     <h1 class="hero-h1">
-      <span class="mega" data-count="4000000" data-suffix="+">4,000,000+</span>
-      <span class="mega-cap">年均服务人次</span>
+      <span class="mega" data-count="4000000" data-suffix="+" aria-hidden="true">4,000,000+</span>
+      <span class="mega-cap" aria-hidden="true">年均服务人次</span>
+      <span class="sr-only">年均服务 400 万人次</span>
     </h1>
 
     <div class="rule" aria-hidden="true"><span class="live"></span><span class="cap"></span></div>
 
     <div class="readings">
-      <div><b>6 个</b><span>产品在跑</span></div>
+      <div><b>3 个</b><span>对外，另 3 个自用</span></div>
       <div><b>28 TB</b><span>年均分发流量</span></div>
       <div><b>4 年</b><span>一直没停</span></div>
     </div>
@@ -203,11 +204,18 @@
     if (t) return t;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
+  function paintThemeMeta(isDark) {
+    var metas = document.querySelectorAll('meta[name="theme-color"]');
+    for (var i = 0; i < metas.length; i++) {
+      metas[i].setAttribute('content', isDark ? '#0C0C0B' : '#F3F3F1');
+    }
+  }
   function paintBtn() {
     if (!toggle) return;
     var isDark = resolved() === 'dark';
     toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
     toggle.setAttribute('aria-label', isDark ? '浅色模式' : '深色模式');
+    paintThemeMeta(isDark);
   }
   try {
     var saved = localStorage.getItem(KEY);
